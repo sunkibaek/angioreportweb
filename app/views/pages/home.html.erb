@@ -1,0 +1,74 @@
+<div class="jumbotron">
+  <div class="container">
+    <%= image_tag 'angio_report.png', class: 'pull-left animated fadeInUp' %>
+
+    <div class="animated fadeInRight">
+      <h1 class="thin">AngioReport</h1>
+      <p class="lead">For better-informed neurointerventional surgeries</p>
+      <ul>
+        <li><span class="glyphicon glyphicon-ok"></span> Comprehensive data input: from access devices to coils</li>
+        <li><span class="glyphicon glyphicon-ok"></span> Calculate packing density real time</li>
+        <li><span class="glyphicon glyphicon-ok"></span> Choose from pre-defined list for rapid input</li>
+        <li><span class="glyphicon glyphicon-ok"></span> Keep your data safe: it does not send any data to anywhere</li>
+        <li><span class="glyphicon glyphicon-ok"></span> Option to send email to yourself</li>
+        <li><span class="glyphicon glyphicon-ok"></span> And it's all free!</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="row marketing animated fadeInRight">
+  <div class="col-lg-6">
+    <a href="#"><%#= image_tag 'en_generic_rgb_wo_60.png', class: 'pull-left' %></a>
+    <p>We are working on it hard!</p>
+
+    <form ng-controller="MailCtrl" ng-submit="submit()" name="mailForm" class="form-inline" role="form">
+      <div class="form-group">
+        <div ng-show="!submitSuccess && !submitFail">
+          <input ng-disabled="submitting" ng-model="email" name="email" type="email" class="form-control input-lg" placeholder="james@example.com" required="required">
+          <input ng-disabled="submitting" ng-value="submitting ? 'Submitting ...' : 'Send'" type="submit" class="btn btn-lg btn-default" value="Send">
+          <span class="help-block">get informed for app release & other news</span>
+        </div>
+
+        <div ng-if="submitSuccess" class="animated fadeIn">
+          <p class="form-control-static">Your mail has been saved!<br>Thanks for your interests.</p>
+        </div>
+
+        <div ng-if="submitFail" class="animated fadeIn">
+          <p class="form-control-static">There was an error submitting!<br>Please try again later.</p>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div class="well">
+  <div class="container">
+    <div class="row marketing">
+      <div class="col-lg-12 text-center">
+        <h2>Mission-critical information at your fingertips</h2>
+      </div>
+
+      <div class="col-lg-4">
+        <h3>Comprehensive data input</h3>
+        <p>From access devices to VRD and coils, surgeons can input all the related information on surgery.</p>
+      </div>
+
+      <div class="col-lg-4">
+        <h3>Real time calculation</h3>
+        <p>Calculate aneurysm volume, total coil length, coil counts, coil volume and packing desntiy real time. Get better informed to make optimized decision.</p>
+      </div>
+
+      <div class="col-lg-4">
+        <h3>Handy utilities</h3>
+        <p>Including <span class="label label-default">french</span> - <span class="label label-default">inch</span> - <span class="label label-default">mm</span> unit converter, the app comes with handy utilities and size chart for fast reference which can be useful during surgeries.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row marketing text-center">
+  <div class="col-lg-12">
+    <h2>Feel free to contact us for any inqueries <br>including new app ideas for healthcare apps at <br><code id="contact-email">{{ 'info' + '@' }}angioreport.com</code></h2>
+  </div>
+</div>
