@@ -10,6 +10,7 @@ gem 'bootstrap-sass'
 gem 'quiet_assets'
 gem 'animate-rails'
 gem 'capistrano', '~> 2.15.5'
+gem 'unicorn'
 
 group :development do
   gem 'spring'
