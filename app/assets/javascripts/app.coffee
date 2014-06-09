@@ -2,7 +2,7 @@
 
 app = angular.module('AngioReportApp', [])
 
-app.controller 'MailCtrl', ($scope, $http) ->
+app.controller 'MailCtrl', ['$scope', '$http', ($scope, $http) ->
   $scope.submit = () ->
     $scope.submitting = true
 
@@ -17,3 +17,4 @@ app.controller 'MailCtrl', ($scope, $http) ->
         $scope.submitSuccess = true
       .error ->
         $scope.submitFail = true
+]
