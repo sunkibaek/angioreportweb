@@ -1,3 +1,4 @@
+require "rvm/capistrano"
 require "bundler/capistrano"
 
 server "angioreport.com", :web, :app, :db, primary: true
