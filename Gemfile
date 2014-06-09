@@ -9,8 +9,8 @@ gem 'angularjs-rails'
 gem 'bootstrap-sass'
 gem 'quiet_assets'
 gem 'animate-rails'
+gem 'capistrano', '~> 2.15.5'
 
 group :development do
   gem 'spring'
-  gem 'capistrano', '~> 2.15.5'
 end
