@@ -1,8 +1,17 @@
-set :application, 'angioreportweb'
-set :repository,  'git@github.com:sunkibaek/#{application}.git'
+require "rvm/capistrano"
+require "bundler/capistrano"
 
-set :scm, :git
-server 'angioreport.com', :web, :app, :db, primary: true
+server "angioreport.com", :web, :app, :db, primary: true
+
+set :application, "angioreportweb"
+set :user, "deployer"
+set :deploy_to, "/home/#{user}/apps/#{application}"
+set :deploy_via, :remote_cache
+set :use_sudo, false
+
+set :scm, "git"
+set :repository, "git@github.com:sunkibaek/#{application}.git"
+set :branch, "master"
 
 default_run_options[:pty] = true
 ssh_options[:forward_agent] = true
